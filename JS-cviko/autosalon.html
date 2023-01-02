@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="autosalon.css" />
+    <title>Autosalon</title>
+  </head>
+  <body>
+    <h1>Objednávka</h1>
+    <p>Vyber značku auta s konkrétní cenou:</p>
+    <select name="brand" id="carBrand">
+      <option value="mercedes">Mercedes 1&nbsp;500&nbsp;000 Kč</option>
+      <option value="volvo">Volvo 1&nbsp;200&nbsp;000 Kč</option>
+      <option value="audi">Audi 1&nbsp;350&nbsp;000 Kč</option>
+      <option value="BMW">BMW 1&nbsp;400&nbsp;000 Kč</option>
+    </select>
+    <br />
+    <p>Vyber barvu:</p>
+    <input type="radio" name="barva" value="zakladni" />Základní barva (bez
+    příplatku) <br />
+    <input type="radio" class="lak" name="barva" value="paleny_lak" />Pálený lak
+    (s příplatkem 5% ze základní ceny vozu) <br />
+    <input
+      type="radio"
+      class="barvy"
+      name="barva"
+      value="metal_barva"
+    />Metalické barvy (s příplatkem 7% ze základní ceny vozu)
+    <p>Zaškrtni dodatečnou výbavu automobilu:</p>
+    <input
+      type="checkbox"
+      name="vybava"
+      value="kamery"
+      class="kamery"
+    />Parkovací kamery (+10&nbsp;000 Kč) <br />
+    <input type="checkbox" name="vybava" value="kola" class="kola" />Litá kola
+    (+20&nbsp;000 Kč) <br />
+    <input
+      type="checkbox"
+      name="vybava"
+      value="sedacky"
+      class="sedacky"
+    />Kožené sedačky (+50&nbsp;000 Kč) <br />
+    <input
+      type="checkbox"
+      name="vybava"
+      value="tuning"
+      class="tuning"
+    />Tuningová úprava (+20% ze základní ceny vozu) <br /><br />
+    <form action="" name="form2">
+      <input type="text" name="vypocet_ceny" class="input_suma" />
+      <button class="vypocitej_sumu">Vypočti cenu</button><br />
+      <label for="suma"
+        >Zadej celkovou sumu, kterou si ochoten za auto zaplatit:</label
+      >
+      <input type="text" name="celkova_suma" id="suma" /><br />
+      <label for="castka">Vlezl jsi se do ceny vozu?</label>
+      <input type="text" id="castka" name="castka" /> <br />
+      <br />
+      <label for="email"
+        >Zadej kontaktní email:
+        <input type="email" name="email" id="email" required />
+        <span class="hidden">Zadal jsi nesprávnou emailovou adresu</span><br />
+        <button class="btn_send">Odeslat</button>
+      </label>
+    </form>
+    <script src="autosalon.js"></script>
+  </body>
+</html>
